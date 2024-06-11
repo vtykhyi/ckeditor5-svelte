@@ -7,6 +7,8 @@ Below are the set of instructions to create svelte project, install component an
 
 ```bash
 $ npm i ckeditor5-svelte
+or
+$ yarn add ckeditor5-svelte 
 ```
 
 ### Getting started

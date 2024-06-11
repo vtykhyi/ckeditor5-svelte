@@ -8,6 +8,12 @@
   export let config = () => ({});
   export let disabled = false;
 
+   const randomID = () => {
+    const randomNumber = Math.floor(Math.random() * 1e16).toString();
+    return `_editor${randomNumber}`;
+  };
+  const randomGeneratedID = randomID();
+
   // Instance variables
   let instance = null;
   let lastEditorData = "";
@@ -32,14 +38,14 @@
       });
     }
     // Get dom element to mount initialised editor instance
-    editorElement = document.getElementById("_editor");
+    editorElement = document.getElementById(randomGeneratedID);
     editor
       .create(editorElement, config)
       .then(editor => {
         // Save the reference to the instance for future use.
         instance = editor;
         // Set initial disabled state.
-        if (disabled) editor.enableReadOnlyMode("_editor");
+        if (disabled) editor?.enableReadOnlyMode(randomGeneratedID);
         // Let the world know the editor is ready.
         dispatch("ready", editor);
         setUpEditorEvents();
@@ -87,4 +93,4 @@
   }
 </script>
 
-<div id="_editor" />
+<div id={randomGeneratedID} />
