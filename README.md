@@ -6,9 +6,9 @@ Below are the set of instructions to create svelte project, install component an
 ### How to install package
 
 ```bash
-$ npm i vtykhyi/ckeditor5-svelte
+$ npm i ckeditor5-svelte
 or
-$ yarn add vtykhyi/ckeditor5-svelte 
+$ yarn add ckeditor5-svelte 
 ```
 
 ### Getting started
@@ -28,7 +28,7 @@ npm install
 #### Install ckeditor5-svelte package
 
 ```bash
-npm i vtykhyi/ckeditor5-svelte
+npm i ckeditor5-svelte
 ```
 
 #### Install DocumentEditor build of ckeditor
